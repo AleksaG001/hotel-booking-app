@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "rooms",
+  "info": {
+    "singularName": "room",
+    "pluralName": "rooms",
+    "displayName": "Sobe",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "naziv": {
+      "type": "string"
+    },
+    "opis": {
+      "type": "text"
+    },
+    "kapacitet": {
+      "type": "integer"
+    },
+    "slika": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "tekst": {
+      "type": "string"
+    },
+    "cena": {
+      "type": "integer"
+    },
+    "velicina": {
+      "type": "string"
+    },
+    "rezervacijes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::rezervacije.rezervacije",
+      "mappedBy": "sobe"
+    }
+  }
+}

@@ -362,6 +362,79 @@ export interface AdminTransferTokenPermission extends Schema.CollectionType {
   };
 }
 
+export interface ApiRezervacijeRezervacije extends Schema.CollectionType {
+  collectionName: 'rezervacijes';
+  info: {
+    singularName: 'rezervacije';
+    pluralName: 'rezervacijes';
+    displayName: 'Rezervacije';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Ime: Attribute.String;
+    Prezime: Attribute.String;
+    email: Attribute.Email;
+    checkIn: Attribute.Date;
+    checkOut: Attribute.Date;
+    sobe: Attribute.Relation<
+      'api::rezervacije.rezervacije',
+      'manyToOne',
+      'api::room.room'
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::rezervacije.rezervacije',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::rezervacije.rezervacije',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiRoomRoom extends Schema.CollectionType {
+  collectionName: 'rooms';
+  info: {
+    singularName: 'room';
+    pluralName: 'rooms';
+    displayName: 'Sobe';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    naziv: Attribute.String;
+    opis: Attribute.Text;
+    kapacitet: Attribute.Integer;
+    slika: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    tekst: Attribute.String;
+    cena: Attribute.Integer;
+    velicina: Attribute.String;
+    rezervacijes: Attribute.Relation<
+      'api::room.room',
+      'oneToMany',
+      'api::rezervacije.rezervacije'
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::room.room', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::room.room', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
 export interface PluginUploadFile extends Schema.CollectionType {
   collectionName: 'files';
   info: {
@@ -798,6 +871,8 @@ declare module '@strapi/types' {
       'admin::api-token-permission': AdminApiTokenPermission;
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
+      'api::rezervacije.rezervacije': ApiRezervacijeRezervacije;
+      'api::room.room': ApiRoomRoom;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
       'plugin::content-releases.release': PluginContentReleasesRelease;
