@@ -6,6 +6,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
+
 const montserrat = Montserrat({
   subsets: ["latin"],
   weight: ["400"],
@@ -43,3 +44,6 @@ export default function RootLayout({
     </html>
   );
 }
+
+
+

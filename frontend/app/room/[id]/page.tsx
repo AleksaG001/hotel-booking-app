@@ -1,3 +1,4 @@
+import Reservation from "@/components/Reservation";
 import Image from "next/image";
 import { TbArrowsMaximize, TbUsers } from "react-icons/tb";
 
@@ -64,11 +65,11 @@ const RoomDetails = async ({ params }: { params: any }) => {
       <section className="min-h-[80vh]">
         <div className="container mx-auto py-8">
           <div className="flex flex-col lg:flex-row lg:gap-12 h-full">
-            <div className="flex-1 ">
+            <div className="flex-1 shadow-md">
               <div className="relative h-[360px] lg:h-[420] mb-8">
                 <Image src={imgURL} fill className="object-cover" alt="" />
               </div>
-              <div className="flex flex-1 flex-col mb-8">
+              <div className="flex flex-1 flex-col mb-8 ml-2 mr-2">
                 <div className="flex justify-between items-center mb-4">
                   <h3 className="h3 primary-font">{attributes.naziv}</h3>
                   <p className="cena h3 mb-4 text-secondary">
@@ -98,8 +99,8 @@ const RoomDetails = async ({ params }: { params: any }) => {
                 <p>{attributes.opis}</p>
               </div>
             </div>
-            <div className="w-full lg:max-w-[360px] h-max bg-slate-600">
-              reservation
+            <div className="w-full lg:max-w-[360px] h-max">
+              <Reservation/>
             </div>
           </div>
         </div>
@@ -113,3 +114,5 @@ const RoomDetails = async ({ params }: { params: any }) => {
 };
 
 export default RoomDetails;
+
+

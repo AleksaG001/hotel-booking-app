@@ -43,7 +43,6 @@ const RoomList = ({ rooms }: RoomListProps) => {
       setFilteredRooms(filtered);
     }
   }, [roomType, rooms.data]);
-  
 
   return (
     <section className="py-16 min-h-[90vh]">
@@ -55,6 +54,7 @@ const RoomList = ({ rooms }: RoomListProps) => {
             alt=""
             className="object-cover"
             loading="eager"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         </div>
         <h2 className="mb-8 primary-font text-4xl sm:text-5xl md:text-5xl lg:text-5xl xl:text-5.5xl">
@@ -117,6 +117,7 @@ const RoomList = ({ rooms }: RoomListProps) => {
                     priority
                     alt="Room Image"
                     className="object-cover"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
                 </div>
               </Link>

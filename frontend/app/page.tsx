@@ -1,4 +1,5 @@
 import Rooms from "@/components/Rooms";
+
 const Home = () => {
   return (
     <main>
@@ -7,3 +8,5 @@ const Home = () => {
   );
 };
 export default Home;
+
+

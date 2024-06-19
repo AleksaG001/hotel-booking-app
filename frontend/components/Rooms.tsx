@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import RoomList from "./RoomList";
+import Carousel from "./Carousel";
 
 const getRooms = async () => {
   try {
@@ -47,6 +48,7 @@ const Rooms = () => {
 
   return (
     <section>
+      <Carousel/>
       <div className="container mx-auto">
         <RoomList rooms={rooms} />
       </div>
