@@ -1,7 +1,11 @@
 # hotel-booking-app
 Tema:
 Moderan Website Hotela koji sadrzi registraciju/login, rezervacije(komunikacija sa API-jem, dodavanje i brisanje registracija,uslovno renderovanje elemenata).
+
+
 Struktura:
+
+
 HOTEL-BOOKING-APP/
 ├── backend/
 │   ├── .strapi/
@@ -51,10 +55,10 @@ Tehnologije:
 
 Next.js 14- react framework 
 React
-Strapi-kontent menadzment sistem za izgradnu API-ja(RESTful i GraphQL)
+Strapi- kontent menadzment sistem za izgradnu API-ja(RESTful i GraphQL)
 Kinde Auth-Autentifikacija
-Tailwind CSS-Framework
+Tailwind CSS- Framework
 Typescript
-shadcn/ui-UI biblioteka
+shadcn/ui- UI biblioteka
 googlemaps
 fontawesome...
