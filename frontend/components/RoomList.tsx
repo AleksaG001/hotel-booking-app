@@ -45,7 +45,7 @@ const RoomList = ({ rooms }: RoomListProps) => {
   }, [roomType, rooms.data]);
 
   return (
-    <section className="py-16 min-h-[90vh]">
+    <section id="rooms" className="py-16 min-h-[90vh]">
       <div className="flex flex-col items-center">
         <div className="relative w-[300px] h-[50px]">
           <Image

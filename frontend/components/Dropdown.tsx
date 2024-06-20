@@ -20,7 +20,7 @@ const Dropdown = ({ user }: { user: any }) => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <div>
+        <div className="flex items-center gap-2 cursor-pointer">
           <Avatar>
             <AvatarImage src={user.picture} />
             <AvatarFallback className="bg-accent text-white">
@@ -66,7 +66,7 @@ const Dropdown = ({ user }: { user: any }) => {
           <DropdownMenuItem>
             Log out
             <DropdownMenuShortcut className="text-lg text-accent">
-              <FaSignOutAlt/>
+              <FaSignOutAlt />
             </DropdownMenuShortcut>
           </DropdownMenuItem>
         </LogoutLink>

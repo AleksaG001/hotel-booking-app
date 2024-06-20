@@ -48,7 +48,7 @@ const Rooms = () => {
 
   return (
     <section>
-      <Carousel/>
+      <Carousel />
       <div className="container mx-auto">
         <RoomList rooms={rooms} />
       </div>
