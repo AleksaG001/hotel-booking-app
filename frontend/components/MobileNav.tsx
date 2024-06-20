@@ -15,7 +15,7 @@ const links = [
     path: "/restaurant",
   },
   {
-    name: "Gallery",
+    name: "Amenities",
     path: "/gallery",
   },
   {

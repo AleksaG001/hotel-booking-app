@@ -3,7 +3,7 @@ const Footer = () => {
     <footer className="bg-white">
       <div className="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between shadow-sm">
         <span className="text-sm text-black sm:text-center dark:text-black">
-          © 2023{" "}
+          © 2024{" "}
           <a href="https://flowbite.com/" className="hover:underline">
             Royal Luxury Hotel
           </a>
